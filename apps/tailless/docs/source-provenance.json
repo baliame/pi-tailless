@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/earendil-works/pi",
+  "revision": "9879bb44754ce42f52800371aac8cfbccf521cb7",
+  "license": "MIT",
+  "files": [
+    {
+      "source": "packages/coding-agent/src/modes/interactive/theme/dark.json",
+      "destination": "src/themes/dark.json",
+      "upstream_sha256": "e1f96982f8cb7d2a48eca7db03c9cb282cb1e14a243680cd855638ecd6a251b6",
+      "adapted": false
+    },
+    {
+      "source": "packages/coding-agent/src/modes/interactive/theme/light.json",
+      "destination": "src/themes/light.json",
+      "upstream_sha256": "2dee6a4be7f765e7fd7728166b7ebf8c29e4ce313f8ec6b38ae50699e3abc2f3",
+      "adapted": false
+    },
+    {
+      "source": "packages/coding-agent/src/modes/interactive/components/user-message.ts",
+      "destination": "src/ui/user-message.ts",
+      "upstream_sha256": "cd5f20bbbac514f68836c6a604995b815e840036a26c1c05c15866087821cdd8",
+      "adapted": true
+    },
+    {
+      "source": "packages/coding-agent/src/modes/interactive/components/assistant-message.ts",
+      "destination": "src/ui/assistant-message.ts",
+      "upstream_sha256": "abf3b596f21de78ace3efb774236c9b5ac7647f77890ceb067a65a17c4ea67fb",
+      "adapted": true
+    },
+    {
+      "source": "packages/coding-agent/src/modes/interactive/components/markdown-transform.ts",
+      "destination": "src/ui/markdown-transform.ts",
+      "upstream_sha256": "741630247cea8647de271b8bba10337f102470ef57478cd7c38364fbae8b052a",
+      "adapted": true
+    }
+  ],
+  "adaptation_notes": "Presentation components use ACP-only types and local UI context. The published Pi TUI 1.5.0 is an independent runtime dependency; the upstream repository tree is retained unchanged."
+}

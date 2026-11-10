@@ -1,0 +1,56 @@
+{
+	"name": "@pi-acp/frontend",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"bin": {
+		"pi-tailless": "dist/cli.js"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./experimental/multi-client-attach": {
+			"types": "./dist/experimental/multi-client-attach.d.ts",
+			"default": "./dist/experimental/multi-client-attach.js"
+		},
+		"./experimental/prompt-delivery": {
+			"types": "./dist/experimental/prompt-delivery.d.ts",
+			"default": "./dist/experimental/prompt-delivery.js"
+		},
+		"./capabilities/shared-queue": {
+			"types": "./dist/capabilities/shared-queue.d.ts",
+			"default": "./dist/capabilities/shared-queue.js"
+		}
+	},
+	"dependencies": {
+		"@earendil-works/pi-tui": "1.5.0",
+		"ajv": "8.20.0",
+		"ajv-formats": "3.0.1",
+		"jiti": "2.7.0"
+	},
+	"description": "Pi terminal UI for independent ACP agents",
+	"files": [
+		"dist",
+		"docs",
+		"examples",
+		"LICENSE",
+		"licenses"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json && node scripts/copy-assets.mjs",
+		"check": "biome check src test examples scripts && tsc --noEmit && node scripts/check.mjs",
+		"start": "node dist/cli.js"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.5",
+		"@types/node": "22.19.19",
+		"typescript": "5.9.3",
+		"@xterm/headless": "5.5.0"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"license": "MIT"
+}

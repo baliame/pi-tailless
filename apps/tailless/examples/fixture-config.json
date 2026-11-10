@@ -1,0 +1,6 @@
+{
+	"endpoint": { "command": "node", "args": ["examples/fixture-peer.mjs"] },
+	"peerCwd": "/srv/project",
+	"theme": "dark",
+	"extensions": ["tasks.ts"]
+}
